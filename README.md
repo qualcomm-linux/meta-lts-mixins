@@ -19,8 +19,8 @@ This layer depends on:
   layers: meta
     branch: wrynose
 
-Contributing
-------------
+Backporting
+-----------
 
 The patches can be backported from openembedded-core with:
 
@@ -36,6 +36,9 @@ or
    origin/master meta-oe/recipes-connectivity/hostapd \
   git am --signoff -p4 --directory=recipes-connectivity/hostapd
 ```
+
+Contributing
+------------
 
   The yocto-patches mailinglist (yocto-patches@lists.yoctoproject.org) is used
   for questions, comments and patch review. It is subscriber only, so please
