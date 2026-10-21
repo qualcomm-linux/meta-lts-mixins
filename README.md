@@ -40,20 +40,8 @@ or
 Contributing
 ------------
 
-  The yocto-patches mailinglist (yocto-patches@lists.yoctoproject.org) is used
-  for questions, comments and patch review. It is subscriber only, so please
-  register before posting.
-
-  Send pull requests to yocto-patches@lists.yoctoproject.org with
-  '[meta-lts-mixins][wrynose/connectivity]' in the subject.
-
-  When sending single patches, please use something like:
-
-```
-  git send-email -M origin/wrynose/connectivity \
-   --to=yocto-patches@lists.yoctoproject.org \
-   --subject-prefix='meta-lts-mixins][wrynose/connectivity][PATCH'
-```
+Please submit any patches against the meta-qcom-3rdparty layer by using the GitHub pull-request feature.
+Fork the repo, create a branch, do the work, rebase from upstream, and create the pull request.
 
 Maintenance
 -----------
