@@ -10,6 +10,17 @@ overriding the oe-core/meta-openembedded versions when explicitly selected.
 The upgrade enables newer features (including EHT/IEEE 802.11be/Wi-Fi 7) and
 includes interoperability and security robustness fixes.
 
+In order to make this layer Yocto Project Compatible, the layer should not
+provide new versions of packages by default. Because of this, the recipe
+provided in this layer will not be used unless that is explicitly stated.
+To use the provided linux-firmware recipe, the following can be done:
+
+```
+# please use 'DEFAULT_PREFERENCE:layer-lts-connectivity-mixin:your_override = ""' to keep Yocto Project Compatible
+echo 'DEFAULT_PREFERENCE:layer-lts-connectivity-mixin = ""' >> recipes-kernel/wpa-supplicant/wpa-supplicant_%.bbappend
+echo 'DEFAULT_PREFERENCE:layer-lts-connectivity-mixin = ""' >> recipes-kernel/hostapd/hostapd_%.bbappend
+```
+
 Dependencies
 ------------
 
