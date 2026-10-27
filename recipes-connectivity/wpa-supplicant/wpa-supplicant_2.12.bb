@@ -148,3 +148,5 @@ python split_wpa_supplicant_libs () {
         d.setVar('RRECOMMENDS:' + pn + '-plugins', ' '.join(split_packages))
 }
 PACKAGESPLITFUNCS += "split_wpa_supplicant_libs"
+
+DEFAULT_PREFERENCE = "-1"
