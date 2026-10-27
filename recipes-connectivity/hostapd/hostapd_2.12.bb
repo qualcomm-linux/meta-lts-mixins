@@ -46,3 +46,5 @@ do_install() {
 }
 
 CONFFILES:${PN} += "${sysconfdir}/hostapd.conf"
+
+DEFAULT_PREFERENCE = "-1"
