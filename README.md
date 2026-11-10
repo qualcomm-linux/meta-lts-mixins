@@ -13,7 +13,7 @@ includes interoperability and security robustness fixes.
 In order to make this layer Yocto Project Compatible, the layer should not
 provide new versions of packages by default. Because of this, the recipe
 provided in this layer will not be used unless that is explicitly stated.
-To use the provided linux-firmware recipe, the following can be done:
+To use the provided recipes, the following can be done:
 
 ```
 # please use 'DEFAULT_PREFERENCE:layer-lts-connectivity-mixin:your_override = ""' to keep Yocto Project Compatible
@@ -51,8 +51,10 @@ or
 Contributing
 ------------
 
-Please submit any patches against the meta-qcom-3rdparty layer by using the GitHub pull-request feature.
-Fork the repo, create a branch, do the work, rebase from upstream, and create the pull request.
+Please submit any patches against the meta-lts-mixins layer and targetin
+the wrynose/connectivity branch by using the GitHub pull-request feature.
+Fork the repo, create a branch, do the work, rebase from upstream, and
+create the pull request.
 
 Maintenance
 -----------
