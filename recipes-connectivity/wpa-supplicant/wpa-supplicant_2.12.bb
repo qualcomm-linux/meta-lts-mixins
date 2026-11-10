@@ -11,6 +11,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=5ebcb90236d1ad640558c3d3cd3035df \
 DEPENDS = "dbus libnl"
 
 SRC_URI = "http://w1.fi/releases/wpa_supplicant-${PV}.tar.gz \
+           file://defconfig \
            file://wpa-supplicant.sh \
            file://wpa_supplicant.conf-sane \
            file://99_wpa_supplicant \
@@ -62,6 +63,8 @@ wpa_supplicant_write_config () {
 }
 
 do_configure () {
+	install -m 0644 ${UNPACKDIR}/defconfig ${B}/wpa_supplicant/defconfig
+
 	${MAKE} -C wpa_supplicant clean
 
 	wpa_supplicant_write_config
